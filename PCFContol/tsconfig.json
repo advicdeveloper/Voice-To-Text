@@ -1,0 +1,15 @@
+{
+    "extends": "./node_modules/pcf-scripts/tsconfig_base.json",
+    "compilerOptions": {
+        "strict": true,
+        "skipLibCheck": true,
+        "forceConsistentCasingInFileNames": true,
+        "noImplicitAny": true,
+        "noFallthroughCasesInSwitch": true,
+        "esModuleInterop": true
+    },
+    "include": [
+        "VoiceTotextPCF/**/*.ts",
+        "VoiceTotextPCF/**/*.xml"
+    ]
+}
