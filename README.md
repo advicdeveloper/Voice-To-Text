@@ -4,6 +4,7 @@ Overview
 
 Purpose: Provides a reusable PCF control to record voice input and transcribe it into text for CRM applications.
 Features:
+
 Real-time speech recognition with interim and final transcriptions.
 Dynamic button states ("Start Speaking", "Listening...", "Browser Not Supported").
 Integration with Dataverse bound fields.
@@ -11,6 +12,7 @@ Accessible design with ARIA labels.
 
 
 Technology Stack:
+
 TypeScript for the control logic.
 CSS for styling.
 Power Apps CLI for development and deployment.
@@ -28,28 +30,25 @@ Microphone: Functional microphone for speech input, with browser permissions ena
 Installation
 
 Clone the Repository:
-git clone https://github.com/yourusername/VoiceToTextPCF.git
+textgit clone https://github.com/yourusername/VoiceToTextPCF.git
 cd VoiceToTextPCF
 
-
 Install Dependencies:
-npm install
-
+textnpm install
 
 Initialize the Solution:
 
-Run the following command to set up the solution with your publisher details:pac solution init --publisher-name "SpeechToTextdev" --publisher-prefix pcfde
+Run the following command to set up the solution with your publisher details:
+textpac solution init --publisher-name "SpeechToTextdev" --publisher-prefix pcfde
 
-
-Add the PCF project reference:pac solution add-reference --path .
-
+Add the PCF project reference:
+textpac solution add-reference --path .
 
 
 
 Build the Project:
-msbuild /t:restore
+textmsbuild /t:restore
 msbuild
-
 
 This generates a .zip file (e.g., VoiceToTextPCF_1_0_0_0.zip) in the bin/debug folder.
 
@@ -59,19 +58,19 @@ Deployment
 
 Import the Solution:
 
-Use the Power Apps CLI to import the solution into your Dataverse environment:pac solution import --path bin\debug\VoiceToTextPCF_1_0_0_0.zip --environment <EnvironmentIdOrName>
-
+Use the Power Apps CLI to import the solution into your Dataverse environment:
+textpac solution import --path bin\debug\VoiceToTextPCF_1_0_0_0.zip --environment <EnvironmentIdOrName>
 
 Replace <EnvironmentIdOrName> with your environment ID (find it with pac env list).
 Alternatively, import via the Power Apps Maker Portal:
+
 Go to https://make.powerapps.com, select your environment, and use Solutions > Import solution.
 
 
 
 
 Publish Customizations:
-pac solution publish
-
+textpac solution publish
 
 Or publish manually in the Maker Portal after importing.
 
@@ -87,6 +86,7 @@ Publish the app to make it live.
 Usage
 
 In-App Behavior:
+
 Click "Start Speaking" to begin recording (requires microphone permission).
 The button changes to "Listening..." during recording.
 Transcribed text appears in the textarea in real-time (interim) and finalizes when stopped.
@@ -97,8 +97,8 @@ Browser Support: Works best in Chrome; other browsers may show "Browser Not Supp
 
 Testing
 
-Run locally with:npm run start
-
+Run locally with:
+textnpm run start
 
 Open the provided URL (e.g., http://localhost:8181) and test the control.
 Check the browser console (F12) for errors (e.g., "not-allowed" for permission issues).
@@ -121,6 +121,6 @@ License
 [Specify your license here, e.g., MIT] - Default is no license unless stated.
 Contact
 
-Author: Advic Tech
-Email: developer@advic.io
+Author: Deven Bhimani
+Email: [your-email@example.com]
 Issues: Report bugs or suggestions on the GitHub Issues page.
